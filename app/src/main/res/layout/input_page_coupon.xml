@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:baselineAligned="false"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    tools:context="com.example.huiying.test2.AddCoupon">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:id="@+id/category"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:text="Category"
+            android:gravity="center"
+            android:textAppearance="@style/RecordFont" />
+
+        <Spinner
+            android:id="@+id/selectCategory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end"
+            android:entries="@array/types"
+            android:prompt="@string/spin_prompt"
+            android:textAppearance="@style/RecordFont" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/storeName"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Store Name"
+            android:textAppearance="@style/RecordFont" />
+
+        <EditText
+            android:id="@+id/enterStoreName"
+            android:layout_width="184dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/typeHere"
+            android:lines="1"
+            android:textAppearance="@style/RecordFont" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/expiryDate"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Expiry Date"
+            android:textAppearance="@style/RecordFont" />
+
+        <TextView
+            android:id="@+id/selectedDate"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:textAppearance="@style/RecordFont" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/calendar"
+            android:onClick="showDatePickerDialog" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/note"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Notes"
+            android:textAppearance="@style/RecordFont" />
+
+        <EditText
+            android:id="@+id/addNote"
+            android:layout_width="187dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/note"
+            android:lines="2"
+            android:textAppearance="@style/RecordFont" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="232dp">
+
+        <Button
+            android:id="@+id/openCamera"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="false"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@android:drawable/ic_menu_camera"
+            android:fontFamily="casual"
+            android:text="Add Photo"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/showPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="228dp"
+            android:layout_weight="0.84"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            app:srcCompat="@drawable/camera" />
+
+
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/saveFloatingActionButton"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/save"
+        app:backgroundTint="@android:color/background_light"
+        app:elevation="8dp"
+        android:layout_weight="0.51" />
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:entries="@array/languages"
+        android:entryValues="@array/languages"
+        android:title="Language"
+        android:key="list_preference_languages"
+        android:summary="English"/>
+
+    <ListPreference
+        android:entries="@array/currencyLists"
+        android:entryValues="@array/currencyLists"
+        android:title="Currency"
+        android:key="list_preference_currency"
+        android:summary="HKD"/>
+
+    <ListPreference
+        android:entries="@array/WSLists"
+        android:entryValues="@array/WSLists"
+        android:title="Week Start"
+        android:key="list_preference_ws"
+        android:summary="Monday"/>
+
+    <SwitchPreference
+        android:title="Daily Reminder"
+        android:key="switch_reminder"
+        android:summary="20:00"/>
+
+    <EditTextPreference
+        android:title="Monthly Budget"
+        android:key="edit_budget"
+        android:summary="$5000"/>
+
+
+
+</PreferenceScreen>
+
